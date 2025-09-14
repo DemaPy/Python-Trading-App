@@ -13,4 +13,5 @@ class User(Base):
     is_active = Column(Boolean, server_default='FALSE', nullable=False)
     is_superuser = Column(Boolean, server_default='FALSE', nullable=False)
     hashed_password = Column(String, nullable=False)
+    refresh_token = Column(String, nullable=True)
     created_at = Column(TIMESTAMP(timezone=True), server_default=text('now()'))
